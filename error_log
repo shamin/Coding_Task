@@ -1,0 +1,12 @@
+[02-Sep-2016 13:03:48 UTC] PHP Fatal error:  Access to undeclared static property: Db::$hostname in /home/ashik9591/public_html/server/Db.php on line 16
+[02-Sep-2016 13:16:46 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ashik9591/public_html/server/Db.php on line 37
+[02-Sep-2016 13:17:33 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ashik9591/public_html/server/Db.php on line 37
+[02-Sep-2016 13:19:41 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ashik9591/public_html/server/Db.php on line 37
+[03-Sep-2016 07:14:53 UTC] PHP Fatal error:  Call to undefined method functions::searchcars() in /home/ashik9591/public_html/server/search.php on line 7
+[03-Sep-2016 07:14:56 UTC] PHP Fatal error:  Call to undefined method functions::searchcars() in /home/ashik9591/public_html/server/search.php on line 7
+[03-Sep-2016 07:14:58 UTC] PHP Fatal error:  Call to undefined method functions::searchcars() in /home/ashik9591/public_html/server/search.php on line 7
+[03-Sep-2016 07:15:12 UTC] PHP Fatal error:  Call to undefined method functions::searchcars() in /home/ashik9591/public_html/server/search.php on line 7
+[03-Sep-2016 07:15:38 UTC] PHP Fatal error:  Call to undefined method functions::searchcars() in /home/ashik9591/public_html/server/search.php on line 7
+[12-Sep-2016 16:50:41 UTC] PHP Fatal error:  Call to undefined method functions::getcar() in /home/ashik9591/public_html/server/car.php on line 6
+[12-Sep-2016 16:50:58 UTC] PHP Fatal error:  Call to undefined method functions::getcar() in /home/ashik9591/public_html/server/car.php on line 6
+[12-Sep-2016 16:50:59 UTC] PHP Fatal error:  Call to undefined method functions::getcar() in /home/ashik9591/public_html/server/car.php on line 6

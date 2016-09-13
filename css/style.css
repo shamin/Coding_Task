@@ -1,0 +1,110 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 8, 2016, Sep 8, 2016 4:02:59 PM
+    Author     : Apple
+*/
+
+ .parallax-container {
+      height: 20em;
+    }
+        
+.pad
+{ 
+       background : #fff;
+}
+.pad a
+{
+    color :  #ff044a;
+    font-weight: bold; 
+    
+}
+.pad a:hover
+{
+    color : #ea0041;
+    font-weight: bold; 
+    background: #fff;
+    
+}
+
+nav .input-field label i {
+    color :#ff044a;
+    font-weight: bold; 
+}
+nav .input-field label i:hover:active:focus:visited {
+    color :#ea0041;
+    font-weight: bold; 
+}
+
+nav .brand-logo {
+    position: absolute;
+    color: #ff044a;
+}
+.nav-left{
+    padding-left: 170px;
+}
+label{
+    
+}
+.bg1{
+    background: url("../assets/s1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#contents {
+    padding-top: 20px;
+}
+.both-slider .noUi-connect{
+    background: black;
+}
+#contents .left-pane{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.bread
+{
+    background: #ff044a;
+}
+.left-pane p{
+    padding: 1rem;
+}
+.scroll{
+    height: 300px;
+    line-height: 1em;
+    overflow: auto;
+    padding: 5px;
+}
+#pricehigh,#mileagehigh{
+    float: right;
+}
+.progress
+{
+    margin: 0 auto;
+    background-color: #ffafb2;
+}
+.progress .indeterminate
+{
+    background-color: #ff044a;
+}
+nav .searchbar {
+    height: 60px;
+}
+.f_size
+{
+    font-size: 16px;
+}
+.car_head
+{
+    text-transform: uppercase;
+}
+.both-slider
+{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+#cars .red-color{
+    color :  #ff044a;
+}

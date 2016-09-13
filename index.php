@@ -1,97 +1,77 @@
-<?php
-include_once 'functions.php';
-$function = new functions();
-$cars = $function->selectcars();
-$n = count($cars);
-?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Ozi Cars</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/nouislider.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/materialize.min.css" rel="stylesheet" type="text/css"/>
         <link href="css/style.css" rel="stylesheet" type="text/css"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="css/nouislider.min.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <nav class="navbar navbar-inverse">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">OZI</a>
-                </div>
-
-                <div class="collapse navbar-collapse">
-                    <form class="navbar-form navbar-left">
-                        <div class="form-group">
-                            <input id="search" type="text" class="form-control" >
-                        </div>
-                        <button type="submit" class="btn btn-default">Search</button>
-                    </form>
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-                        <li><a href="#">Link</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="signup.php">SignUp</a></li>
-                                <li><a href="login.php">Login</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
-        </nav>
+        <?php
+        include 'navbar.php';
+        ?>
         <section id="contents">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-3 col-md-4"> 
+                    <div class="card col l3 m12 s12 left-pane">
+                        <div class="row"><h5 class="center-align">Filters</h5></div>
                         <div class="row">
-                            <div id="slider-snap"></div>
+                            <form id="filterform">
+                                <ul class="collapsible" data-collapsible="accordion">
+                                    <li>
+                                        <div class="collapsible-header">Fuel</div>
+                                        <div class="collapsible-body">
+                                            <p>
+                                                <input name="fuel" value="Petrol" class="with-gap" type="radio" id="test1" />
+                                                <label for="test1">Petrol</label>
+                                            </p>
+                                            <p>
+                                                <input name="fuel" value="Diesel" class="with-gap" type="radio" id="test2" />
+                                                <label for="test2">Diesel</label>
+                                            </p>
+                                        </div>
+                                    </li> 
+                                    <li>
+                                        <div class="collapsible-header">Make</div>
+                                        <div class="collapsible-body scroll">
+                                            <?php
+                                            include ('loadmake.php');
+                                            ?>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="collapsible-header">Price (Lakhs)</div>
+                                        <div class="collapsible-body"><p id="pricehigh"></p><p id="pricelow"></p><div class="both-slider" id="slider-price"></div><p></p></div>
+                                    </li>
+                                    <li>
+                                        <div class="collapsible-header">Mileage (KMPL)</div>
+                                        <div class="collapsible-body"><p id="mileagehigh"></p><p id="mileagelow"></p><div class="both-slider" id="slider-mileage"></div><p></p></div>
+                                    </li>
+                                </ul>
+                            </form>
                         </div>
-                        <p id="values"></p>
+                        <div>
+                            <a class="waves-effect waves-light btn" id="save"><i class="material-icons right">done</i>Save</a>
+                        </div>
+                        <br>
                     </div>
-                    <div class="col-lg-9 col-md-8">
-                        <div class="row">
-                            <?php
-                            for ($index = 0; $index < $n; $index++) {
-                                echo '<div class = "col-sm-6 col-md-4">
-                            <div class = "thumbnail">
-                            <img src = "assets/car1.png" alt = "...">
-                            <div class = "caption">
-                            <h3>' . $cars[$index]["name"] . '</h3>
-                            <p>' . $cars[$index]["price"] . '</p>
-                            </div>
-                            </div>
-                            </div>';
-                            }
-                            ?>
+                    <div class="col l9 m12 s12">
+                        <div id="cars" class="row">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <script src="js/jquery-3.1.0.min.js" type="text/javascript"></script>
+        <script src="js/nouislider.min.js" type="text/javascript"></script>
+        <script src="js/materialize.min.js" type="text/javascript"></script>
+        <script src="js/myscripts.js" type="text/javascript"></script>
+        <script>
+            $(".button-collapse").sideNav();
+        </script>
     </body>
-    <script src="js/jquery-3.1.0.min.js" type="text/javascript"></script>
-    <script src="js/bootstrap.min.js" type="text/javascript"></script>   
-    <script src="js/nouislider.min.js" type="text/javascript"></script>
-    <script>
-        var snapSlider = document.getElementById('slider-snap');
-
-        noUiSlider.create(snapSlider, {
-            start: [4, 25],
-            connect: true,
-            range: {
-                'min': [1],
-                'max': [50]
-            }
-        });
-    </script>
 </html>
