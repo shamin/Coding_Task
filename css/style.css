@@ -91,6 +91,7 @@ label{
 }
 nav .searchbar {
     height: 60px;
+    color: #000; 
 }
 .f_size
 {
@@ -107,4 +108,11 @@ nav .searchbar {
 }
 #cars .red-color{
     color :  #ff044a;
+}
+nav .searchbar {
+    height: 60px;
+    color: #000; 
+}
+nav{
+    color:#000;
 }
